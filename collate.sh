@@ -19,6 +19,8 @@ do
         rwmixwrite="0"
     fi
     new_directory="$WORKLOAD_SIZE""_workload_""$blocksize""_blocksize_""$iodepth""_iodepth_""$rwmixwrite""_rwmix"
-    mkdir "$new_directory" 
+    if [[ ! -d $new_directory ]]; then
+        mkdir "$new_directory" 
+    fi
     mv "$directory" "$new_directory"
 done
