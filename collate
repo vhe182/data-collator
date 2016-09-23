@@ -6,7 +6,7 @@ set -e
 
 if [[ $# -lt 1 ]]; then
   SCRIPT_NAME="$(basename "$0")"
-  echo "Usage: $script_name < workload-size=[large|small] >"
+  echo "Usage: $SCRIPT_NAME < workload-size=[large|small] >"
   exit -1
 fi
 WORKLOAD_SIZE="$1"
